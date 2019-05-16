@@ -2,8 +2,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
     
-
     @IBOutlet weak var myTableView: UITableView!
+    
+    var selection = 0
     
     var animals = ["Bird", "Cat", "Pig", "Horse", "Whale"]
     var ages = ["1 세", "2 세", "3 세", "4 세", "5 세"]
@@ -41,6 +42,19 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.imageView?.image = UIImage(named: animals[row])
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToAdd" {
+            let addVC = segue.destination as! AddViewController
+            
+            addVC.cellTitle = String(animals[selection])
+            addVC.cellImage = UIImage(named: animals[selection])
+        } else if segue.identifier == "GoToDetail" {
+            let detailVC = segue.destination as! DetailViewController
+            
+            detailVC.cellTitle = String(animals[selection])
+        }
     }
     
     override func viewDidLoad() {

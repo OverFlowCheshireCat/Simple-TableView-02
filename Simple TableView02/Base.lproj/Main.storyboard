@@ -46,7 +46,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Jwl-IM-tPb" kind="show" identifier="go" id="K7p-yY-foH"/>
+                                            <segue destination="Jwl-IM-tPb" kind="show" identifier="GoToDetail" id="K7p-yY-foH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -64,7 +64,7 @@
                     <navigationItem key="navigationItem" id="Dy5-rF-aH5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8mY-7B-egt">
                             <connections>
-                                <segue destination="rq1-9F-iTM" kind="show" identifier="addgo" id="2jt-52-Mtb"/>
+                                <segue destination="rq1-9F-iTM" kind="show" identifier="GoToAdd" id="2jt-52-Mtb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -74,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="-564"/>
+            <point key="canvasLocation" x="797.60000000000002" y="-564.46776611694156"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6ab-TW-vn0">
@@ -101,13 +101,30 @@
                     <view key="view" contentMode="scaleToFill" id="TmX-5i-oGL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rUF-XC-95d">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeV-1g-NiS">
+                                <rect key="frame" x="166" y="169" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.1630341219" green="1" blue="0.95735453020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="iXL-2h-bA6"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="rUF-XC-95d" id="7P5-Yq-7jq"/>
+                        <outlet property="titleText" destination="eeV-1g-NiS" id="sGI-P0-PJZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tru-5r-2wr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="-858"/>
+            <point key="canvasLocation" x="1573.5999999999999" y="-858.62068965517244"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="rfU-I7-0YQ">
@@ -116,9 +133,26 @@
                     <view key="view" contentMode="scaleToFill" id="GfX-ZY-yNv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FrR-Dt-drv">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEM-3d-C4O">
+                                <rect key="frame" x="166" y="170" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="h3A-PG-CwD"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="FrR-Dt-drv" id="RJT-PZ-KFb"/>
+                        <outlet property="titleText" destination="HEM-3d-C4O" id="7Re-Ee-a0f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGD-O9-ahu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
